@@ -2,18 +2,17 @@
 
 @charset "UTF-8";
 
-
-// Config
+// Normalize
 @import
-	"_app/partials/config";
-
+	"_app/partials/normalize";
+	
 // Generic
 @import
 	"_app/partials/generic";
 
-// Normalize
-// @import
-// 	"_foundation/normalize";
+// Config
+@import
+	"_app/partials/config";
 
 // Base
 @import

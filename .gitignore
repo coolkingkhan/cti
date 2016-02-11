@@ -1,3 +1,4 @@
 *.sass-cache
 node_modules
-build
+build/assets/css/main.css
+build/assets/css/temp/main.css

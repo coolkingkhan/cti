@@ -4,28 +4,29 @@
 $base-background-color : #fff;
 
 // Font Colors
-$base-font-color       : #111;
-$secondary-font-color  : #ccc;
+$base-font-color       : #18191a;
+$secondary-font-color  : #12bbc1;
 $link-color            : #333;
 $link-hover-color      : #0074D9;
 $link-active-color     : #0074D9;
 
 // Font Family
-$base-font         : Arial;
-$secondary-font    : Times New Roman;
-$heading-base-font : Arial;
+$base-font         : 'Open Sans';
+$secondary-font    : sans-serif;
+$heading-base-font : 'Open Sans';
 
 // Font Sizes
 $base-font-size    :  16px;
 $base-line-height  :  1.6;
 
 // Layout
-$max-width                : 1000; // Use $row-width if you want value with 'px'
-$column-gutter-width      : 30;
+$max-width                : 1180; // Use $row-width if you want value with 'px'
+$column-gutter-width      : 20;
 $number-of-columns        : 12;
 
 // Breakpoints
-$mobile  : "only screen and (max-width: 599px)";
-$desktop : "only screen and (min-width: 600px)";
+$mobile  : "only screen and (max-width: 480px)";
+$tablet : "only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1)";
+$desktop : "only screen and (min-width: 1024px)";
 
 
