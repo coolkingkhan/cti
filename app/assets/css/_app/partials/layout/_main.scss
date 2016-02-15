@@ -1,1 +1,10 @@
 /* main layout */
+
+main {
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		display: block;
+		overflow: hidden;
+	}
+}
