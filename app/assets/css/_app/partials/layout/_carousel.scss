@@ -1,0 +1,172 @@
+.carousel-container {
+  @include rem(max-width, 1180px);
+  margin: 0 auto 14px auto;
+  position: relative;
+  display: block;
+  text-align: center;
+  background-color: $base-font-color;
+
+  &:hover {
+    .carousel_nav {
+      color: rgba(255,255,255,0.7);
+      transition: color 1s ease-in-out;
+    }
+  }
+  
+  & .caption{
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    z-index: 2;
+    line-height: 1;
+
+    span {
+      @include rem(font-size, 25px);
+      @include rem(margin, 0 0 30px 0);
+      padding: 0;
+      display: block;
+    }
+
+    h1 {
+      @include rem(margin, 0 0 40px 0);
+      @include rem(font-size, 61px);
+      padding: 0;
+      text-transform: uppercase;
+      display: block;
+      letter-spacing: -1px;
+    }
+  }
+
+  .carousel {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: 0;
+
+    li {
+      -webkit-backface-visibility: hidden;
+      position: absolute;
+      display: none;
+      width: 100%;
+      left: 0;
+      top: 0;
+
+      &:first-child {
+        position: relative;
+        display: block;
+        float: left;
+      }   
+    }
+
+    img {
+      display: block;
+      height: auto;
+      float: left;
+      width: 100%;
+      border: 0;
+    }
+
+    &_nav {
+      @include rem(font-size, 50px);
+      @include rem(width, 30px);
+      @include rem(height, 50px);
+      @include rem(margin-top, -30px);
+      @include rem(left, 14px);
+      position: absolute;
+      top: 50%;
+      z-index: 3;
+      color: rgba(255,255,255,0);
+      text-decoration: none;
+      line-height: 1;
+
+      &.next {
+        left: auto;
+        @include rem(right, 14px);
+      }
+    }
+
+    &_tabs {
+      position: absolute;
+      bottom: 6%;
+      left: 50%;
+      display: block;
+      z-index: 1;
+      text-align: center;
+      transform: translate(-50%, -50%);
+      line-height: 1;
+      
+      li {
+        @include rem(margin-right, 10px);
+        display: inline;
+        float: none;
+
+        a {
+          @include rem(border-radius, 15px);
+          @include rem(width, 14px);
+          @include rem(height, 14px);
+          text-indent: -999px;
+          font-size: 0;
+          overflow: hidden;
+          background: rgba(255,255,255, 0.5);
+          display: inline-block;
+        }
+      }
+
+      & .carousel_here {
+        a {
+          background: rgba(255,255,255, 1);
+        }
+      } 
+    }
+  }
+  @include mobile {
+    & .caption {
+      span {
+        @include rem(font-size, 10px);
+        @include rem(margin-bottom, 10px);
+      }
+      h1 {
+        @include rem(font-size, 20px);
+        @include rem(margin-bottom, 15px);
+      }
+    }
+    & .carousel_tabs {
+      @include rem(bottom, 15px);
+    }
+  }
+
+  @include landscape {
+    & .caption {
+      span {
+        @include rem(font-size, 20px);
+        @include rem(margin-bottom, 20px);        
+      }
+      h1 {
+        @include rem(font-size, 30px);
+        @include rem(margin-bottom, 20px);
+      }
+    }
+  }
+
+  @include tablet {
+    & .caption {
+      span {
+        @include rem(font-size, 20px);
+        @include rem(margin-bottom, 20px);
+      }
+      h1 {
+        @include rem(font-size, 40px);
+        @include rem(margin-bottom, 30px);
+      }
+    }
+    & .carousel_tabs {
+      @include rem(bottom, 20px);
+    }
+  }
+}

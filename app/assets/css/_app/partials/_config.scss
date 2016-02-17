@@ -2,10 +2,11 @@
 
 // Layout Colors
 $base-background-color : #fff;
+$base-btn-color : #12bbc1;
 
 // Font Colors
 $base-font-color       : #18191a;
-$secondary-font-color  : #12bbc1;
+$secondary-font-color  : $base-btn-color;
 $link-color            : #333;
 $link-hover-color      : #b3a7a7;
 $link-active-color     : #b3a7a7;
@@ -26,6 +27,6 @@ $number-of-columns        : 12;
 
 // Breakpoints
 
-$landscape-width: 480px;
+$landscape-width: 481px;
 $tablet-width: 768px;
 $desktop-width: 1025px;

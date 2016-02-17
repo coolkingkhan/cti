@@ -3,3 +3,34 @@
 a.is-active {
 	color: $link-active-color;
 }
+
+a.btn {
+	@include rem(padding, 20px 35px);
+	@include rem(border-radius,30px);
+	@include rem(font-size, 15px);
+	text-decoration: none;
+	background-color: $base-btn-color;
+	color: white;
+	display: inline-block;
+
+	&:hover {
+		color: white;
+		background-color: rgba(18,187,193,0.6);
+		transition: background-color 0.4s;
+	}
+
+	@include mobile {
+        @include rem(font-size, 8px);
+        @include rem(padding, 7px 10px);
+	}
+
+	@include landscape {
+	    @include rem(font-size, 15px);
+	    @include rem(padding, 15px 20px);	
+	}
+
+	@include tablet {
+	    @include rem(font-size, 15px);
+	    @include rem(padding, 15px 20px);
+	}
+}

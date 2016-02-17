@@ -2,7 +2,7 @@
 
 a {
 	color: $link-color;
-	@include transition(color .25s);
+	transition: color .25s;
 	&:hover {
 		color: $link-hover-color;
 	}
