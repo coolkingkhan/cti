@@ -18,13 +18,16 @@
 	}
 
 	&__mobile-nav {
-		@include rem(padding, 19px);
 		@include rem(margin-right, 10px);
 		display: none;
 		float: left;
 		background-color: $link-active-color;
 		color: white;
 		cursor: pointer;
+		label {
+			@include rem(padding, 24px);
+			cursor: pointer;
+		}
 	}
 
 	&__logo {
