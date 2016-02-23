@@ -38,6 +38,12 @@
       display: block;
       letter-spacing: -1px;
     }
+    .btn--header {
+      background-color: rgba(18,187,193,1);
+      &:hover {
+        background-color: rgba(18,187,193,0.6);
+      }
+    }
   }
 
   .carousel {

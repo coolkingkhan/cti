@@ -1,0 +1,157 @@
+.image-grid{
+	position: relative;
+	display: block;
+	text-align: center;
+	max-width: 1194px; //1180 + 14px border
+	margin: 0 auto;
+
+	&__inner {
+	  height:0;
+	  position: relative;
+	  padding-bottom: 100%;
+	}
+
+	&__item {
+	  position: absolute;
+	  border: 7px solid white;
+	  border-top: none;
+	  border-bottom: 14px solid white;
+	  overflow: hidden;
+
+	  &-image {
+	  	display: block;
+	  	background-size: cover;
+	  	background-repeat: no-repeat;
+	    position: absolute;
+	    min-height:100%;
+	    width: 100%;
+	    height: auto;
+	    top: 0;
+	    left: 0;
+
+	    &-caption {
+	    	display: block;
+	    	margin-top: 112px;
+	    	h2 {
+				font-size: 37px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				margin-bottom: 23px;
+	    	}
+	    	.btn {
+	    		padding: 15px 40px;
+	    		font-size: 18px;
+	    		text-transform: capitalize;
+	    	}
+	    }
+
+	    &-caption-alt {
+			display: inline-block;
+			padding: 15px 67px 33px 33px;
+			text-align: left;
+			position: absolute;
+			bottom: 15px;
+			left: 15px;
+			background: white;
+
+			h2 {
+				font-size: 30px;
+				text-transform: uppercase;
+				margin: 0;
+				letter-spacing: 1px;
+				display: block;
+			}
+
+			.btn-arrow {
+			    text-transform: capitalize;
+			    font-size: 16px;
+			    text-decoration: none;
+			}
+	    }
+
+	    &:hover {
+			opacity: 0.2;
+			filter: grayscale(100%);
+			transform: scale(1.1);
+			transition: all .2s;
+	    }
+	  }
+
+	  &-1 {
+		background-color: $base-dark-color;
+		left: 0;
+		top: 0;
+		width: 33.3%;
+		height: 0;
+		padding-top: 61%;
+	  }
+	  &-2 {
+		background-color: $base-dark-color;
+		left: 33.3%;
+		top: 0;
+		width: 66.6%;
+		height: 0;
+		padding-top: 30%;
+	  }
+	  &-3 {
+		background-color: $base-dark-color;
+		left: 33.3%;
+		top: 31.5%;
+		width: 33.3%;
+		height: 0;
+		padding-top: 29.5%;
+	  }
+	  &-4 {
+		background-color: $base-dark-color;
+		left: 66.6%;
+		top: 31.5%;
+		width: 33.3%;
+		height: 0;
+		padding-top: 61%;
+	  }
+	  &-5 {
+		background-color: $base-dark-color;
+		left: 0;
+		top: 62.5%;
+		width: 66.6%;
+		height: 0;
+		padding-top: 30%;	  	
+	  }			
+	}
+	@include mobile {
+
+	  &__inner {
+	    padding-bottom: 140%;
+	  }
+	  &__item {
+	  	&-1,
+	  	&-2,
+	  	&-3,
+	  	&-4 {
+			position: relative;
+			left: auto;
+			top: auto;
+			height: 0;
+			width: 50%;
+			padding-top: 50%;
+			float: left;
+			&:nth-child(odd) {
+				margin-right: 0px;
+			}  		
+	  	}
+	  	&-5 {
+			position: relative;
+			left: auto;
+			top: auto;
+			height: 50%;
+			width: 100%;
+			float: left;  		
+	  	}
+	  	&--tall {
+	  		& .image-grid__item-image {
+	  			background-position: 0 90%;
+	  		}
+	  	}
+	  }
+	}
+}

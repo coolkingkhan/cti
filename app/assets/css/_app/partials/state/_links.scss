@@ -9,13 +9,13 @@ a.btn {
 	@include rem(border-radius,30px);
 	@include rem(font-size, 15px);
 	text-decoration: none;
-	background-color: $base-btn-color;
+	background-color: rgba(0,0,0,0.6);
 	color: white;
 	display: inline-block;
 
 	&:hover {
 		color: white;
-		background-color: rgba(18,187,193,0.6);
+		background-color: rgba(0,0,0,1);
 		transition: background-color 0.4s;
 	}
 
