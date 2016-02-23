@@ -1,0 +1,176 @@
+// can further seperate breakpoints if needed just to be more specific
+
+// MOBILE
+
+@include mobile {
+
+  .header {
+      padding: 0;
+    .container {
+      padding: 0;
+    }
+    &__mobile-nav {
+      display: inline-block;
+    }
+    &__logo {
+      @include rem(margin, 15px 30px 0 0);
+    }
+    &__menu {
+      display: none;
+      &--links {
+        @include rem(margin-top, 20px);
+        display: block;
+        
+        ul li {
+          @include rem(margin-right, 20px);
+        }
+      }
+    }
+  }
+
+  .carousel-container{
+    & .caption {
+      span {
+        @include rem(font-size, 10px);
+        @include rem(margin-bottom, 10px);
+      }
+      h1 {
+        @include rem(font-size, 20px);
+        @include rem(margin-bottom, 15px);
+      }
+    }
+    & .carousel_tabs {
+      @include rem(bottom, 15px);
+    }
+  }
+
+  .image-grid {
+    &__item {
+      &-1,
+      &-2,
+      &-3,
+      &-4 {
+      position: relative;
+      left: auto;
+      top: auto;
+      height: 0;
+      width: 50%;
+      padding-top: 50%;
+      float: left;
+      &:nth-child(odd) {
+        margin-right: 0px;
+      }     
+      }
+      &-5 {
+      position: relative;
+      left: auto;
+      top: auto;
+      height: 50%;
+      width: 100%;
+      float: left;      
+      }
+      &--tall {
+        & .image-grid__item-image {
+          background-position: 0 90%;
+        }
+      }
+    }
+  }
+
+  .footer {
+    &__links,
+    &__subscribe {
+      width: 100%;
+      display: block;
+    }
+    &__links {
+      @include rem(margin-bottom, 20px);
+      overflow: hidden;
+      &-wrap {
+        @include rem(padding, 35px 0);
+      }
+    }
+    &__subscribe {
+      @include rem(margin-bottom, 35px);
+      text-align: center;
+    }
+  }    
+}
+
+// MOBILE LANDSCAPE
+
+@include landscape {
+
+  .carousel-container {
+    & .caption {
+      span {
+        @include rem(font-size, 20px);
+        @include rem(margin-bottom, 20px);        
+      }
+      h1 {
+        @include rem(font-size, 30px);
+        @include rem(margin-bottom, 20px);
+      }
+    }    
+  }
+}
+
+// TABLET BREAKPOINT
+
+@include tablet {
+
+  .header {
+      padding: 0;
+    .container {
+      padding: 0;
+    }
+    &__mobile-nav {
+      display: inline-block;
+    }
+    &__logo {
+      @include rem(margin, 15px 30px 0 0);
+    }
+    &__menu {
+      display: none;
+      &--links {
+        @include rem(margin-top, 20px);
+        display: block;
+        
+        ul li {
+          @include rem(margin-right, 20px);
+        }
+      }
+    }
+  }
+
+  .carousel-container {
+    & .caption {
+      span {
+        @include rem(font-size, 20px);
+        @include rem(margin-bottom, 20px);
+      }
+      h1 {
+        @include rem(font-size, 40px);
+        @include rem(margin-bottom, 30px);
+      }
+    }
+    & .carousel_tabs {
+      @include rem(bottom, 20px);
+    }    
+  }
+
+  .footer {
+    &__subscribe {
+      @include rem(font-size, 12px);
+      text-align: center;
+      
+      &-input {
+        padding: 0;
+      }
+      .btn--subscribe {
+        @include rem(padding, 5px 10px);
+        @include rem(font-size, 12px);
+      }
+    }
+  }
+}

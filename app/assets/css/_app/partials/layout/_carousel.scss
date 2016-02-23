@@ -131,48 +131,4 @@
       } 
     }
   }
-  @include mobile {
-    & .caption {
-      span {
-        @include rem(font-size, 10px);
-        @include rem(margin-bottom, 10px);
-      }
-      h1 {
-        @include rem(font-size, 20px);
-        @include rem(margin-bottom, 15px);
-      }
-    }
-    & .carousel_tabs {
-      @include rem(bottom, 15px);
-    }
-  }
-
-  @include landscape {
-    & .caption {
-      span {
-        @include rem(font-size, 20px);
-        @include rem(margin-bottom, 20px);        
-      }
-      h1 {
-        @include rem(font-size, 30px);
-        @include rem(margin-bottom, 20px);
-      }
-    }
-  }
-
-  @include tablet {
-    & .caption {
-      span {
-        @include rem(font-size, 20px);
-        @include rem(margin-bottom, 20px);
-      }
-      h1 {
-        @include rem(font-size, 40px);
-        @include rem(margin-bottom, 30px);
-      }
-    }
-    & .carousel_tabs {
-      @include rem(bottom, 20px);
-    }
-  }
 }

@@ -8,7 +8,7 @@
 	&__inner {
 	  height:0;
 	  position: relative;
-	  padding-bottom: 100%;
+	  padding-bottom: 92.5%;
 	}
 
 	&__item {
@@ -30,41 +30,42 @@
 	    left: 0;
 
 	    &-caption {
+	    	@include rem(margin-top, 112px);
 	    	display: block;
-	    	margin-top: 112px;
+
 	    	h2 {
-				font-size: 37px;
+	    		@include rem(font-size, 37px);
+	    		@include rem(letter-spacing, 1px);
+	    		@include rem(margin-bottom, 23px);
 				text-transform: uppercase;
-				letter-spacing: 1px;
-				margin-bottom: 23px;
 	    	}
 	    	.btn {
-	    		padding: 15px 40px;
-	    		font-size: 18px;
+	    		@include rem(padding, 15px 40px);
+	    		@include rem(font-size, 18px);
 	    		text-transform: capitalize;
 	    	}
 	    }
 
 	    &-caption-alt {
+	    	@include rem(padding, 15px 67px 33px 33px);
+	    	@include rem(bottom, 15px);
+	    	@include rem(left, 15px);
 			display: inline-block;
-			padding: 15px 67px 33px 33px;
 			text-align: left;
 			position: absolute;
-			bottom: 15px;
-			left: 15px;
 			background: white;
 
 			h2 {
-				font-size: 30px;
+				@include rem(font-size, 30px);
+				@include rem(letter-spacing, 1px);
 				text-transform: uppercase;
 				margin: 0;
-				letter-spacing: 1px;
 				display: block;
 			}
 
 			.btn-arrow {
+				@include rem(font-size, 16px);
 			    text-transform: capitalize;
-			    font-size: 16px;
 			    text-decoration: none;
 			}
 	    }
@@ -72,7 +73,7 @@
 	    &:hover {
 			opacity: 0.2;
 			filter: grayscale(100%);
-			transform: scale(1.1);
+			//transform: scale(1.1);
 			transition: all .2s;
 	    }
 	  }
@@ -83,7 +84,7 @@
 		top: 0;
 		width: 33.3%;
 		height: 0;
-		padding-top: 61%;
+		padding-top: 62%;
 	  }
 	  &-2 {
 		background-color: $base-dark-color;
@@ -96,62 +97,26 @@
 	  &-3 {
 		background-color: $base-dark-color;
 		left: 33.3%;
-		top: 31.5%;
+		top: 34%;
 		width: 33.3%;
 		height: 0;
-		padding-top: 29.5%;
+		padding-top: 30.5%;
 	  }
 	  &-4 {
 		background-color: $base-dark-color;
 		left: 66.6%;
-		top: 31.5%;
+		top: 34%;
 		width: 33.3%;
 		height: 0;
-		padding-top: 61%;
+		padding-top: 62%;
 	  }
 	  &-5 {
 		background-color: $base-dark-color;
 		left: 0;
-		top: 62.5%;
+		top: 68.6%;
 		width: 66.6%;
 		height: 0;
 		padding-top: 30%;	  	
 	  }			
-	}
-	@include mobile {
-
-	  &__inner {
-	    padding-bottom: 140%;
-	  }
-	  &__item {
-	  	&-1,
-	  	&-2,
-	  	&-3,
-	  	&-4 {
-			position: relative;
-			left: auto;
-			top: auto;
-			height: 0;
-			width: 50%;
-			padding-top: 50%;
-			float: left;
-			&:nth-child(odd) {
-				margin-right: 0px;
-			}  		
-	  	}
-	  	&-5 {
-			position: relative;
-			left: auto;
-			top: auto;
-			height: 50%;
-			width: 100%;
-			float: left;  		
-	  	}
-	  	&--tall {
-	  		& .image-grid__item-image {
-	  			background-position: 0 90%;
-	  		}
-	  	}
-	  }
 	}
 }

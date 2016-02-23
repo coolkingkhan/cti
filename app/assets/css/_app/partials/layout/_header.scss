@@ -1,49 +1,39 @@
 /* header layout */
 
 .header {
-	height: 63px;
+	@include rem(height, 63px);
+	@include rem(padding, 15px);
 	background-color: #383434;
 	display: block;
 	color: white;
 	margin: 0;
-	padding: 0;
 	overflow: hidden;
+	
 	.container {
 		max-width: 1180px;
 		display: block;
 		margin: 0 auto;
 		padding: 0;
-
-		@include desktop {
-			padding: 15px;
-		}
+		overflow: hidden;
 	}
 
 	&__mobile-nav {
-		display: inline-block;
+		@include rem(padding, 19px);
+		@include rem(margin-right, 10px);
+		display: none;
 		float: left;
-		padding: 19px;
 		background-color: $link-active-color;
 		color: white;
-		margin-right: 10px;
 		cursor: pointer;
-
-		@include desktop {
-			display: none;
-		}
 	}
 
 	&__logo {
-		margin: 15px 30px 0 0;
+		@include rem(margin, 0 30px 0 0);
+		@include rem(font-size, 21px);
 		padding: 0;
 		display: inline-block;
-		font-size: 21px;
 		font-weight: 700;
 		float: left;
-
-		@include desktop {
-			margin: 0 30px 0 0;
-		}
 
 		a {
 			display: block;
@@ -53,28 +43,26 @@
 	}
 
 	&__menu {
-		display: none;
-
-		@include desktop {
-			display: inline-block;
-			float: left;
-			margin-top: 6px;
-		}
+		@include rem(margin-top, 6px);
+		display: inline-block;
+		float: left;
 
 		ul {
 			list-style-type: none;
 
 			li {
+				@include rem(margin-right, 35px);
 				display: inline-block;
-				margin-right: 35px;
+
 				a {
+					@include rem(padding, 5px 10px);
+					@include rem(font-size, 16px);
 					color: white;
 					text-decoration: none;
-					padding: 5px 10px;
-					font-size: 16px;
 					font-weight: 600;
 					opacity: 1;
 				}
+
 				&:after {
 					font-family: "FontAwesome";
 					content: "\f107";
@@ -90,8 +78,6 @@
 				}
 			}
 
-
-
 			& .special {
 				margin-right: 0;
 				text-transform: uppercase;
@@ -105,26 +91,19 @@
 		}
 
 		&--links {
+			@include rem(margin-top, 6px);
 			float: right;
 			display: inline-block;
-			margin-top: 20px;
 
 			ul li {
-				margin-right: 20px;
+				@include rem(margin-right, 35px);
+				
 				&:after {
 					display: none;
 				}
-			}
 
-			@include desktop {
-				margin-top: 6px;
-				
-				ul li {
-					margin-right: 35px;
-
-					&:last-child {
-						margin-right: 0; 
-					}
+				&:last-child {
+					margin-right: 0;
 				}
 			}
 		}
