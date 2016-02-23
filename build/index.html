@@ -21,41 +21,151 @@
 
         
 
-<header class="header">
-	<nav class="header__mobile-nav">
-		<ul>
-			<li><a href="#">Seating</a></li>
-			<li><a href="#">Lighting</a></li>
-			<li><a href="#">Tables</a></li>
-			<li><a href="#">Beds</a></li>
-			<li><a href="#">Accessories</a></li>
-			<li><a href="#">New</a></li>
-		</ul>		
-	</nav>
-	<h1 class="header__logo">Fresh</h1>
-	<nav class="header__menu">
-		<ul>
-			<li><a href="#">Seating</a></li>
-			<li><a href="#">Lighting</a></li>
-			<li><a href="#">Tables</a></li>
-			<li><a href="#">Beds</a></li>
-			<li><a href="#">Accessories</a></li>
-			<li><a href="#">New</a></li>
-		</ul>
-	</nav>
-	<nav class="header__links">
-		<ul>
-			<li><a href="#">Search</a></li>
-			<li><a href="#">Cart</a></li>
-			<li><a href="#">User</a></li>
-		</ul>
-	</nav>
-
+<input type="checkbox" id="sidebar">
+<div class="page-wrap">
+	<header class="header">
+	<div class="container">
+		<nav class="header__mobile-nav"><label for="sidebar" class="fa fa-bars"></label></nav>
+		<h1 class="header__logo"><a href="/">fresh.</a></h1>
+		<nav class="header__menu">
+			<ul>
+				<li><a href="#">Seating</a></li>
+				<li><a href="#">Lighting</a></li>
+				<li><a href="#">Tables</a></li>
+				<li><a href="#">Beds</a></li>
+				<li><a href="#">Accessories</a></li>
+				<li class="special"><a href="#">New</a></li>
+			</ul>
+		</nav>
+		<nav class="header__menu header__menu--links">
+			<ul>
+				<li><a href="#"><i class="fa fa-search"></i></a></li>
+				<li><a href="#"><i class="fa fa-shopping-basket"></i></a></li>
+				<li><a href="#"><i class="fa fa-user"></i></a></li>
+			</ul>
+		</nav>		
+	</div>
 </header>
+	<div class="carousel-container">
+	<div class="caption">
+		<span>2016</span>
+		<h1>New collections</h1>
+		<a href="#" class="btn btn--header">Shop Collection</a>
+	</div>
+	<ul class="carousel">
+		<li>
+			<picture>
+			    <source media="(min-width: 64rem)" srcset="assets/img/carousel-1.jpg">
+			    <source media="(min-width: 40rem)" srcset="assets/img/carousel-1-medium.jpg">
+			    <img src="assets/img/carousel-1-small.jpg" alt="">
+			</picture>
+		</li>
+		<li>
+			<picture>
+			    <source media="(min-width: 64rem)" srcset="https://unsplash.it/1180/441?image=1007">
+			    <source media="(min-width: 40rem)" srcset="https://unsplash.it/750/319?image=992">
+			    <img src="https://unsplash.it/320/203?image=974" alt="">
+			</picture>
+		</li>
+		<li>
+			<picture>
+			    <source media="(min-width: 64rem)" srcset="https://unsplash.it/1180/441?image=879">
+			    <source media="(min-width: 40rem)" srcset="https://unsplash.it/750/319?image=825">
+			    <img src="https://unsplash.it/320/203?image=765" alt="">
+			</picture>
+		</li>
+	</ul>	
+</div>
+
+	<main>
+<section class="image-grid">
+    <div class="image-grid__inner">
+        <div class="image-grid__item image-grid__item-1 image-grid__item--tall">
+        	<div class="image-grid__item-image" style="background-image: url(assets/img/lighting.jpg)"></div>
+            <div class="image-grid__item-image-caption image-grid__item-image-caption--tall">
+                <h2>lighting</h2>
+                <a href="#" class="btn">shop lighting</a>
+            </div>
+        </div>
+        <div class="image-grid__item image-grid__item-2">
+        	<div class="image-grid__item-image" style="background-image: url(assets/img/spaces.jpg)"></div>
+            <div class="image-grid__item-image-caption-alt">
+                <h2>calm spaces</h2>
+                <a href="#" class="btn-arrow">shop furniture <i class="fa fa-long-arrow-right"></i></a>
+            </div> 
+        </div>
+        <div class="image-grid__item image-grid__item-3">
+        	<div class="image-grid__item-image" style="background-image: url(assets/img/chairs.jpg)"></div>
+            <div class="image-grid__item-image-caption">
+                <h2>chairs</h2>
+                <a href="#" class="btn">shop chairs</a>
+            </div> 
+        </div>
+        <div class="image-grid__item image-grid__item-4 image-grid__item--tall">
+        	<div class="image-grid__item-image" style="background-image: url(assets/img/stools.jpg)"></div>
+            <div class="image-grid__item-image-caption image-grid__item-image-caption--tall">
+                <h2>stools</h2>
+                <a href="#" class="btn">shop stools</a>
+            </div> 
+        </div>
+        <div class="image-grid__item image-grid__item-5">
+        	<div class="image-grid__item-image" style="background-image: url(assets/img/showroom.jpg)"></div>
+            <div class="image-grid__item-image-caption-alt">
+                <h2>the showroom</h2>
+                <a href="#" class="btn-arrow">about us <i class="fa fa-long-arrow-right"></i></a>
+            </div> 
+        </div>
+    </div>	
+</section>
+
+</main>
+	<footer class="footer">
+	<div class="footer__links-wrap">
+		<div class="container">
+			<nav class="footer__links">
+				<ul>
+					<li><a href="#">about us</a></li>
+					<li><a href="#">orders &amp; returns</a></li>
+					<li><a href="#">customer services</a></li>
+					<li><a href="#">delivery</a></li>
+					<li><a href="#">privacy</a></li>
+					<li><a href="#">advanced search</a></li>
+					<li><a href="#">contact</a></li>
+					<li><a href="#">cookies</a></li>
+				</ul>
+			</nav>
+
+			<form action="" class="footer__subscribe">
+				<input type="text" placeholder="Email Address" class="footer__subscribe-input" />
+				
+				<button type="submit" class="btn btn--subscribe">Subscribe <i class="fa fa-check"></i></button>
+			</form>
+		</div>		
+	</div>
+	<div class="footer__copyright">
+		<div class="container">
+			<p>Copyright &copy; 2015 Fresh. All Rights Reserved.</p>
+		</div>		
+	</div>
+</footer>
+	<div class="sidebar">
+		<ul>
+			<li><a href="">Seating</a></li>
+			<li><a href="">Lighting</a></li>
+			<li><a href="">Tables</a></li>
+			<li><a href="">Beds</a></li>
+			<li><a href="">Accessories</a></li>
+			<li><a href="">NEW</a></li>
+		</ul>
+	</div>	
+</div>
+
 
 
         <script src="assets/js/vendor/jquery-1.11.1.min.js"></script>
+        <script src="assets/js/responsiveslides.js"></script>
         <script src="assets/js/main.js"></script>
+        
 
         <!--[if lt IE 9]>
             <script src="../assets/js/vendor/html5shiv.min.js"></script>
