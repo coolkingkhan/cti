@@ -45,33 +45,87 @@
   }
 
   .image-grid {
+    &__item-2 {
+      & .image-grid__item-image {
+        & .image-grid__item-image-caption-alt {
+          @include rem(margin-top, 40px);
+          padding: 0;
+          bottom: auto;
+          left: auto;
+          display: inline-block;
+          text-align: center;
+          position: relative;
+          background: transparent;
+          color: white;
+          h2 {
+            @include rem(font-size, 16px);
+            @include rem(margin-bottom, 10px);
+          }
+          .btn-arrow {
+            @include rem(font-size, 10px);
+            @include rem(padding, 10px 15px);
+            @include rem(border-radius,30px);
+            background-color: rgba(0,0,0,0.6);
+            color: white;
+            i {
+              display: none;
+            }
+          }          
+        }
+      }      
+    }
     &__item {
       &-1,
       &-2,
       &-3,
       &-4 {
-      position: relative;
-      left: auto;
-      top: auto;
-      height: 0;
-      width: 50%;
-      padding-top: 50%;
-      float: left;
-      &:nth-child(odd) {
-        margin-right: 0px;
-      }     
+        position: relative;
+        left: auto;
+        top: auto;
+        height: 0;
+        width: 50%;
+        padding-top: 50%;
+        float: left;
+
+        &:nth-child(odd) {
+          margin-right: 0px;
+        }     
       }
+
       &-5 {
-      position: relative;
-      left: auto;
-      top: auto;
-      height: 50%;
-      width: 100%;
-      float: left;      
-      }
-      &--tall {
+        position: relative;
+        left: auto;
+        top: auto;
+        height: 0;
+        width: 100%;
+        float: left;
+        padding-top: 50%;
         & .image-grid__item-image {
-          background-position: 0 90%;
+          & .image-grid__item-image-caption-alt {
+            @include rem(padding, 10px);
+            h2 {
+              @include rem(font-size, 16px);
+            }
+          }
+        }      
+      }
+      &-image {
+        &-caption {
+          @include rem(margin-top, 40px);
+          position: relative;
+          left: auto;
+          top: auto;
+          transform: translate(0, 0);
+          span {
+            display: none;
+          }
+          h2 {
+            @include rem(font-size, 16px);
+            @include rem(margin-bottom, 10px);
+          }
+          .btn {
+            @include rem(font-size, 10px);
+          }
         }
       }
     }
@@ -157,6 +211,16 @@
     & .carousel_tabs {
       @include rem(bottom, 20px);
     }    
+  }
+
+  .image-grid {
+    &__item {
+      &-image {
+        &-caption--tall {
+          @include rem(margin-top, -140px);
+        }
+      }
+    }
   }
 
   .footer {

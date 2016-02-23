@@ -30,19 +30,26 @@
 	    left: 0;
 
 	    &-caption {
-	    	@include rem(margin-top, 112px);
 	    	display: block;
+	    	position: absolute;
+	    	top: 50%;
+	    	left: 50%;
+	    	transform: translate(-50%, -50%);
 
 	    	h2 {
 	    		@include rem(font-size, 37px);
 	    		@include rem(letter-spacing, 1px);
 	    		@include rem(margin-bottom, 23px);
 				text-transform: uppercase;
+				color: white;
 	    	}
 	    	.btn {
-	    		@include rem(padding, 15px 40px);
 	    		@include rem(font-size, 18px);
 	    		text-transform: capitalize;
+	    	}
+
+	    	&--tall {
+	    		@include rem(margin-top, -170px);
 	    	}
 	    }
 
@@ -71,15 +78,14 @@
 	    }
 
 	    &:hover {
-			opacity: 0.2;
-			filter: grayscale(100%);
-			//transform: scale(1.1);
-			transition: all .2s;
+			// opacity: 0.2;
+			// filter: grayscale(100%);
+			// //transform: scale(1.1);
+			// transition: all .2s;
 	    }
 	  }
 
 	  &-1 {
-		background-color: $base-dark-color;
 		left: 0;
 		top: 0;
 		width: 33.3%;
@@ -87,7 +93,6 @@
 		padding-top: 62%;
 	  }
 	  &-2 {
-		background-color: $base-dark-color;
 		left: 33.3%;
 		top: 0;
 		width: 66.6%;
@@ -95,7 +100,6 @@
 		padding-top: 30%;
 	  }
 	  &-3 {
-		background-color: $base-dark-color;
 		left: 33.3%;
 		top: 34%;
 		width: 33.3%;
@@ -103,7 +107,6 @@
 		padding-top: 30.5%;
 	  }
 	  &-4 {
-		background-color: $base-dark-color;
 		left: 66.6%;
 		top: 34%;
 		width: 33.3%;
@@ -111,7 +114,6 @@
 		padding-top: 62%;
 	  }
 	  &-5 {
-		background-color: $base-dark-color;
 		left: 0;
 		top: 68.6%;
 		width: 66.6%;

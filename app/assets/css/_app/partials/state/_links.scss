@@ -1,9 +1,5 @@
 /* link state */
 
-.is-active {
-	color: $link-active-color;
-}
-
 .btn {
 	@include rem(padding, 20px 35px);
 	@include rem(border-radius,30px);
@@ -20,13 +16,8 @@
 	}
 
 	@include mobile {
-        @include rem(font-size, 8px);
-        @include rem(padding, 7px 10px);
-	}
-
-	@include landscape {
-	    @include rem(font-size, 15px);
-	    @include rem(padding, 15px 20px);	
+        @include rem(font-size, 10px);
+        @include rem(padding, 10px 15px);
 	}
 
 	@include tablet {
