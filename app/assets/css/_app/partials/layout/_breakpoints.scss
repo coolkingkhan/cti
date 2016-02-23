@@ -51,33 +51,36 @@
       }
     }
     &__item-2 {
-      & .image-grid__item-image {
-        & .image-grid__item-image-caption-alt {
-          @include rem(margin-top, 40px);
-          padding: 0;
-          bottom: auto;
-          left: auto;
-          display: inline-block;
-          text-align: center;
-          position: relative;
-          background: transparent;
-          color: white;
-          h2 {
-            @include rem(font-size, 16px);
-            @include rem(margin-bottom, 10px);
-          }
-          .btn-arrow {
-            @include rem(font-size, 10px);
-            @include rem(padding, 10px 15px);
-            @include rem(border-radius,30px);
-            background-color: rgba(0,0,0,0.6);
-            color: white;
-            i {
-              display: none;
-            }
-          }          
+      & .image-grid__item-image-caption-alt {
+        padding: 0;
+        top: 50%;
+        left: 50%;
+        display: inline-block;
+        background: transparent;
+        color: white;
+        transform: translate(-50%, -50%);
+        bottom: auto;
+        text-align: center;
+        width: 100%;
+        h2 {
+          @include rem(font-size, 16px);
+          @include rem(margin-bottom, 10px);
         }
-      }      
+        .btn-arrow {
+          @include rem(font-size, 10px);
+          @include rem(padding, 10px 15px);
+          @include rem(border-radius,30px);
+          background-color: rgba(0,0,0,0.6);
+          color: white;
+          i {
+            display: none;
+          }
+
+          &:hover {
+            background-color: rgba(0,0,0,1);
+          }
+        }          
+      }
     }
     &__item {
       &-1,
@@ -105,22 +108,16 @@
         width: 100%;
         float: left;
         padding-top: 50%;
-        & .image-grid__item-image {
-          & .image-grid__item-image-caption-alt {
-            @include rem(padding, 10px);
-            h2 {
-              @include rem(font-size, 16px);
-            }
+
+        & .image-grid__item-image-caption-alt {
+          @include rem(padding, 10px);
+          h2 {
+            @include rem(font-size, 16px);
           }
-        }      
+        }
       }
       &-image {
         &-caption {
-          @include rem(margin-top, 40px);
-          position: relative;
-          left: auto;
-          top: auto;
-          transform: translate(0, 0);
           span {
             display: none;
           }
@@ -130,6 +127,9 @@
           }
           .btn {
             @include rem(font-size, 10px);
+          }
+          &--tall {
+            margin-top: 0;
           }
         }
       }
@@ -261,7 +261,7 @@
     &__item {
       &-image {
         &-caption--tall {
-          @include rem(margin-top, -140px);
+          // @include rem(margin-top, -140px);
         }
       }
     }
