@@ -1,10 +1,10 @@
 /* link state */
 
-a.is-active {
+.is-active {
 	color: $link-active-color;
 }
 
-a.btn {
+.btn {
 	@include rem(padding, 20px 35px);
 	@include rem(border-radius,30px);
 	@include rem(font-size, 15px);

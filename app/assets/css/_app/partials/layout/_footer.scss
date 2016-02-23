@@ -1,1 +1,85 @@
 /* footer layout */
+
+.footer {
+	@include rem(margin-top, 26px);
+	clear: both;
+	overflow: hidden;
+	background-color: $footer-bg;
+
+	.container {
+		@include rem(padding, 0 10px);
+		max-width: 1200px;
+		display: block;
+		margin: 0 auto;
+		overflow: hidden;		
+	}
+
+	&__links {
+		width: 66%;
+		display: inline-block;
+		vertical-align: middle;
+		ul {
+			li {
+				@include rem(padding-right, 14px);
+				float:left;
+				display:inline;
+				width: 50%;
+				a {
+					text-decoration: none;
+					text-transform: capitalize;
+				}
+			}
+		}
+
+		&-wrap {
+			@include rem(padding, 75px 0); 
+		}
+	}
+
+	&__subscribe {
+		@include rem(padding-left, 14px);
+		width: 33.333%;
+		display: inline-block;
+		vertical-align: middle;
+		text-align: right;
+		
+		&-input {
+			@include rem(padding, 15px 15px 15px 0);
+			border: none;
+			border-bottom: 1px solid $base-btn-color;
+			background-color: $footer-bg;
+
+			&::-webkit-input-placeholder,
+			&:-ms-input-placeholder,
+			&::-ms-input-placeholder,
+			&:-moz-placeholder{
+				color: $base-btn-color;
+			}
+		}
+
+		&-input::placeholder {
+			color: $base-btn-color;
+			background-color: transparent;
+		}
+		
+		.btn--subscribe {
+			@include rem(padding, 15px 20px);
+			color: $base-btn-color;
+			border: 1px solid $base-btn-color;
+			background-color: transparent;
+			display: inline-block;
+			position: relative;
+
+			&:hover {
+				background-color: $base-btn-color;
+				color: white;
+			}
+		}
+	}
+
+	&__copyright {
+		background-color: $copyright-bg;
+		color: white;
+		text-align: center;
+	}
+}
